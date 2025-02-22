@@ -17,11 +17,11 @@ function pridejUkol() {
     }
 }
 
-function zobrazUkoly() {
+function zobrazUkoly(zobrazovaneUkoly = ukoly) {
     const seznam = document.getElementById("seznamUkolu");
     seznam.innerHTML = "";
 
-    ukoly.forEach((ukol, index) => {
+    zobrazovaneUkoly.forEach((ukol, index) => {
         const polozka =
             "<li class='ukol " + (ukol.hotovo ? "hotovo" : "") + "'> " +
             "<input type='checkbox' " +
@@ -43,6 +43,24 @@ function ulozUkoly() {
     localStorage.setItem("ukoly", JSON.stringify(ukoly));
 }
 
+function filtrujUkoly(kategorie_parameter) {
+    console.log("Filtruji podle kategorie " + kategorie_parameter);
+
+    if (kategorie_parameter === 'vse') {
+        zobrazUkoly();
+    }
+    else {
+        const filtrovaneUkoly = ukoly.filter(ukol => ukol.kategorie === kategorie_parameter);
+        zobrazUkoly(filtrovaneUkoly);
+        //kategorie_parameter = "prace"
+        //ukol.kategorie - nakupy -> nakupy === kategorie_parameter -> false -> nevrátím tento záznam
+        //ukol.kategorie - prace -> prace === kategorie_parameter -> true -> vratím tento záznam
+        //ukol.kategorie - osobni -> osobni === kateogire_parameter -> false ->nevrátím
+        //ukol.kategorie - prace -> prace === kategorie_parameter -> true -> vratím tento záznam
+        //ve výsledku ve filtrovanéUkoly budou dva objekty - s indexem 1 a 3, tj. pořadí 2 a 4 ukol.
+    }
+
+}
 
 ukoly = JSON.parse(localStorage.getItem("ukoly")) || [];
 
