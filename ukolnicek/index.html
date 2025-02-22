@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List - Úkolník</title>
+    <style>
+        .ukol.hotovo {
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+
+        .ukol {
+            margin: 10px 0;
+        }
+
+        button {
+            margin: 5px;
+        }
+
+        .pridat_ukol {
+            background-color: coral;
+            padding: 10px;
+            border-radius: 20px;
+            color: white;
+            border: none;
+            transition: all 0.5 ease;
+            box-shadow: 0 4px 13px rgba(0, 0, 0, 0.7);
+        }
+
+        .pridat_ukol:hover {
+            cursor: pointer;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.9);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Můj ToDo list</h1>
+
+    <div>
+        <input type="text" id="novyUkol" placeholder="Napiš svůj úkol">
+        <select id="kategorie">
+            <option value="prace">Práce</option>
+            <option value="osobni">Osobní</option>
+            <option value="nakupy">Nákupy</option>
+        </select>
+        <button class="pridat_ukol" onclick="pridejUkol()">Přidat</button>
+    </div>
+
+    <div id="filtry">
+        <button onclick="filtrujUkoly('vse')">Vše</button>
+        <button onclick="filtrujUkoly('prace')">Práce</button>
+        <button onclick="filtrujUkoly('osobni')">Osobní</button>
+        <button onclick="filtrujUkoly('nakupy')">Nákupy</button>
+    </div>
+
+    <ul id="seznamUkolu"></ul>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
