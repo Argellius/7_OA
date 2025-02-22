@@ -43,6 +43,10 @@ foreach ($services as $service) {
         $servicesPrice += $servicesPrices[$service];
 }
 
+$test = 5; // chci přičíst hodnotu 10
+$test = $test + 10;  // rozšířená verze
+$test += 10; // zkrácená verze
+
 
 $totalServicePrice = $servicesPrice * $night;
 $totalRoomPrice = $roomPrice * $night;
