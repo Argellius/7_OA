@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reponzivní UI s Bootstrap 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigační lišta -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Moje stránka</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Domů</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">O nás</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Služby</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hlavní obsah -->
+    <div class="container mt-4">
+        <h1>Vítejte na naší stránce!</h1>
+        <p>Toto je příklad reponzivního uživatelského rozhraní vytvořeného pomocí Bootstrapu 5.</p>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>O nás</h2>
+                <p>Jsme firma, která se specializuje na poskytování kvalitních služeb našim zákazníkům.</p>
+            </div>
+            <div class="col-md-6">
+                <h2>Naše služby</h2>
+                <p>Nabízíme širokou škálu služeb, které splní vaše potřeby a očekávání.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Patička -->
+    <footer class="bg-light text-center text-lg-start mt-4">
+        <div class="text-center p-3">
+            © 2023 Moje stránka. Všechna práva vyhrazena.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
