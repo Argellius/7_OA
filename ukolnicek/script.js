@@ -27,11 +27,17 @@ function zobrazUkoly(zobrazovaneUkoly = ukoly) {
             <input type='checkbox' "
             ${(ukol.hotovo ? "checked" : "")} onchange='oznacUkol(${index})' >
             ${ukol.text} (${ukol.kategorie}) 
-            <button onclick="smazUkol(${index})>Smazat</button></li>`;
+            <button onclick="smazUkol(${index})">Smazat</button></li>`;
 
         seznam.innerHTML += polozka;
     })
 
+}
+
+function smazUkol(index) {
+    ukoly.splice(index, 1);
+    ulozUkoly();
+    zobrazUkoly();
 }
 
 function oznacUkol(index) {
