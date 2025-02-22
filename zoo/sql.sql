@@ -27,8 +27,8 @@ CREATE TABLE zvirata (
 	id int PRIMARY KEY AUTO_INCREMENT,
     jmeno varchar(255) NOT NULL,
     druh_id int NOT NULL,
-    datum_prichodu date not NULL,
-    FOREIGN KEY druh_id REFERENCES druh(id)
+    datum_prichodu date NOT NULL,
+    FOREIGN KEY (druh_id) REFERENCES druhy(id)
 );
 
 INSERT INTO zvirata (jmeno, druh_id, datum_prichodu) VALUES
