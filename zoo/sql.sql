@@ -51,3 +51,6 @@ INSERT INTO krmeni (id_zvirete, id_jidla, mnozstvi, datum_krmeni) VALUES
 (2,2,20,'2023-05-02 10:00:00'),
 (3,3,20,'2023-05-11 10:00:00'),
 (4,4,10,'2023-05-12 10:00:00');
+
+ALTER TABLE krmeni ADD CONSTRAINT FOREIGN KEY (id_zvirete) REFERENCES zvirata(id);
+ALTER TABLE krmeni ADD CONSTRAINT FOREIGN KEY (id_jidla) REFERENCES jidlo(id);
