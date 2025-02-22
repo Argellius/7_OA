@@ -24,7 +24,7 @@ function zobrazUkoly(zobrazovaneUkoly = ukoly) {
     zobrazovaneUkoly.forEach((ukol, index) => {
         const polozka =
             `<li class='ukol  ${(ukol.hotovo ? "hotovo" : "")} '> 
-            <input type='checkbox' "
+            <input type='checkbox'
             ${(ukol.hotovo ? "checked" : "")} onchange='oznacUkol(${index})' >
             ${ukol.text} (${ukol.kategorie}) 
             <button onclick="smazUkol(${index})">Smazat</button></li>`;
