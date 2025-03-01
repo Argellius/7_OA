@@ -13,7 +13,7 @@ $options->set('isHtml5ParserEnabled', true);
 $dompdf = new Dompdf($options);
 
 // Načtení dat z databáze
-$query = 'SELECT z.jmeno, z.datum_prichodu, z.puvod
+$query = 'SELECT z.jmeno, z.datum_prichodu
           FROM zvirata z
           JOIN druhy d ON z.druh_id = d.id';
 $stmt = $pdo->query($query);
@@ -55,7 +55,6 @@ $html = '
             <tr>
                 <th>Jméno</th>
                 <th>Datum příchodu</th>
-                <th>Původ</th>
             </tr>
         </thead>
         <tbody>';
@@ -65,7 +64,6 @@ foreach ($animals as $animal) {
         <tr>
             <td>' . htmlspecialchars($animal['jmeno'], ENT_QUOTES, 'UTF-8') . '</td>
             <td>' . htmlspecialchars($animal['datum_prichodu'], ENT_QUOTES, 'UTF-8') . '</td>
-            <td>' . htmlspecialchars($animal['puvod'], ENT_QUOTES, 'UTF-8') . '</td>
         </tr>';
 }
 
@@ -86,4 +84,3 @@ $dompdf->render();
 
 // Výstup PDF do prohlížeče
 $dompdf->stream("Seznam_Zvirat.pdf", ["Attachment" => false]);
-?>
