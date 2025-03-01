@@ -13,6 +13,7 @@ include_once "includes/header.php";
 
 <main>
     <h1>Seznam zvířat</h1>
+    <a href="add_animal.php">Přidat</a>
     <table>
         <tr>
             <th>Jméno</th>

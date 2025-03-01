@@ -35,7 +35,7 @@ $html = '
             margin-top: 20px;
         }
         table th, table td {
-            border: 1px solid #ddd;
+            border: 1px solid blue;
             padding: 8px;
             text-align: left;
         }
