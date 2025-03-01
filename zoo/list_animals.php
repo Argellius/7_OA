@@ -27,7 +27,9 @@ include_once "includes/header.php";
                     ?></td>
                 <td>
                     <a href="edit_animal.php?id=<?php echo $animal["id"] ?>">Editovat</a>
-                    <a href="delete_animal.php?id=<?php echo $animal["id"] ?>">Smazat</a>
+                    <a
+                        href="delete_animal.php?id=<?php echo $animal["id"] ?>"
+                        onclick="return confirm('Opravdu si přejete smazat záznam <?php echo $animal['jmeno'] ?>');">Smazat</a>
                 </td>
             </tr>
         <?php endforeach; ?>
